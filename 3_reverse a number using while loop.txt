@@ -1,0 +1,30 @@
+//3 reverse a number using while loop
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int dividend,remainder,quotient;
+
+    printf("input number ");
+    scanf("%d",&dividend);
+    printf("reverse number ");
+
+    while(dividend>10){
+        remainder=dividend%10;
+
+        printf("%d",remainder);
+        quotient=dividend/10;
+        dividend=quotient;
+    }
+    printf("%d",dividend);
+    return 0;
+}
+/*
+1.check dividend>10
+2.find remainder and print
+3.find quotient and update dividend=quotient
+4.last printf for print last dividend
+5. formula divisor|dividend|quotient
+                -------------
+                  remainder
+*/
