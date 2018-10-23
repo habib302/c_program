@@ -11,7 +11,6 @@ int main()
 
     while(dividend>10){
         remainder=dividend%10;
-
         printf("%d",remainder);
         quotient=dividend/10;
         dividend=quotient;
@@ -19,6 +18,7 @@ int main()
     printf("%d",dividend);
     return 0;
 }
+
 /*
 1.check dividend>10
 2.find remainder and print
