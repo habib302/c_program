@@ -1,23 +1,28 @@
-//3 reverse a number using while loop
+//3 reverse a number using while loop or palllindrome
 #include<stdio.h>
 #include<conio.h>
 int main()
 {
-    int dividend,remainder,quotient;
+    int dividend,remainder=0,quotient=0,reverse=0,pallindrome;
 
     printf("input number ");
     scanf("%d",&dividend);
+    pallindrome=dividend;
     printf("reverse number ");
 
-    while(dividend>10){
+    while(dividend>0){
         remainder=dividend%10;
-        printf("%d",remainder);
         quotient=dividend/10;
+        reverse=(reverse*10)+remainder;
         dividend=quotient;
     }
-    printf("%d",dividend);
+    printf("%d\n",reverse);
+    if(pallindrome == reverse){
+        printf("pallindrome");
+    }else printf("not");
     return 0;
 }
+
 
 /*
 1.check dividend>10
