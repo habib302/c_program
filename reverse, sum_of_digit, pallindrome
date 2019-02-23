@@ -1,25 +1,27 @@
-//3 reverse a number using while loop or palllindrome
+//reverse, sum_of_digit, pallindrome
 #include<stdio.h>
 #include<conio.h>
 int main()
 {
-    int dividend,remainder=0,quotient=0,reverse=0,pallindrome;
+    int dividend,remainder=0,quotient=0,reverse=0,pallindrome,sum=0;
 
-    printf("input number ");
+    printf("original number ");
     scanf("%d",&dividend);
-    pallindrome=dividend;
-    printf("reverse number ");
+    pallindrome=dividend; //original number ta copy kore nilam
 
     while(dividend>0){
         remainder=dividend%10;
         quotient=dividend/10;
-        reverse=(reverse*10)+remainder;
         dividend=quotient;
+        reverse=(reverse*10)+remainder;
+        sum=sum+remainder;
     }
-    printf("%d\n",reverse);
+    printf("reverse number %d\n",reverse);
+    printf("sum_of_digit is %d\n",sum);
+
     if(pallindrome == reverse){
-        printf("pallindrome");
-    }else printf("not");
+        printf("pallindrome.");
+    }else printf("not pallindrome.");
     return 0;
 }
 
