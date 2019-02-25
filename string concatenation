@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    int i,j,length=0;
+    char s1[100],s2[100];
+
+    printf("enter the string s1: \n");
+    gets(s1);
+
+    printf("enter the string s2: \n");
+    gets(s2);
+
+    while(s1[length] != '\0'){
+        length++;
+    }
+
+    for(j=0;s2[j] != '\0';length++,j++){
+        s1[length]=s2[j];
+    }
+    s1[length]='\0';
+    printf("string s1: %s\n",s1);
+    printf("string s2: %s",s2);
+
+    return 0;
+}
