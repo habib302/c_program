@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int length=0,count,i;
+    char s1[100],rev[100];
+
+    printf("enter the string: ");
+    scanf("%s",s1);
+  //gets(s1);
+
+    while(s1[length] != '\0'){
+        length++;
+    }
+
+    printf("length is %d\n",length);
+  //array is start with zero
+    length=length-1;
+    count=length;
+
+    for(i=0;i<=count;i++){
+        rev[i]=s1[length];
+        length--;
+    }
+    rev[i]='\0';
+    printf("reverse string: %s",rev);
+
+    return 0;
+}
