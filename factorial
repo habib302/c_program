@@ -1,0 +1,52 @@
+//using loop
+#include <stdio.h>
+int main()
+{
+    int num,i;
+    long int fact=1;
+
+    printf("Enter an integer: ");
+    scanf("%d",&num);
+
+    // show error if the user enters a negative integer
+    if (num < 0)
+        printf("Factorial of a negative number doesn't exist.");
+
+    else
+    {
+        for(i=1; i<=num; i++)
+        {
+            fact= fact*i;
+        }
+        printf("Factorial of %d = %ld", num, fact);
+    }
+
+    return 0;
+}
+
+
+//using recursion
+#include <stdio.h>
+long int factorial(int num);
+int main()
+{
+    int num;
+
+    printf("Enter an integer: ");
+    scanf("%d",&num);
+
+    // show error if the user enters a negative integer
+    if (num < 0)
+        printf("Factorial of a negative number doesn't exist.");
+    else {
+	factorial(num);
+    	printf("Factorial of %d = %ld", num, factorial(num));
+    }
+    return 0;
+}
+long int factorial(int num){
+if(num>=1)
+    return num*factorial(num-1);
+else return 1;
+}
+
