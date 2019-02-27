@@ -3,11 +3,11 @@
 #include<conio.h>
 int main()
 {
-    int dividend,remainder=0,quotient=0,reverse=0,pallindrome,sum=0;
+    int dividend,remainder=0,quotient=0,reverse=0,original,sum=0,armstrong=0;
 
     printf("original number ");
     scanf("%d",&dividend);
-    pallindrome=dividend; //original number ta copy kore nilam
+    original=dividend; //original number ta copy kore nilam
 
     while(dividend>0){
         remainder=dividend%10;
@@ -15,13 +15,19 @@ int main()
         dividend=quotient;
         reverse=(reverse*10)+remainder;
         sum=sum+remainder;
+        armstrong=armstrong+(remainder*remainder*remainder);
+        printf("%d\n",armstrong);
     }
     printf("reverse number %d\n",reverse);
     printf("sum_of_digit is %d\n",sum);
 
-    if(pallindrome == reverse){
-        printf("pallindrome.");
-    }else printf("not pallindrome.");
+    if(original == reverse){
+        printf("pallindrome.\n");
+    }else printf("not pallindrome.\n");
+
+    if(original == armstrong){
+        printf("armstrong.");
+    }else printf("not armstrong.");
     return 0;
 }
 
